@@ -10,6 +10,9 @@ import {
   Star,
 } from "lucide-react";
 
+import { QRCodeSVG } from "qrcode.react";
+import { Link } from "react-router-dom";
+
 const PilotPresentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -225,6 +228,15 @@ const PilotPresentation = () => {
 
   return (
     <div className="flex flex-col items-center justify-between min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 p-4 md:p-8">
+      <Link
+        to={"/content"}
+        className="block absolute top-4 right-4 md:top-8 md:right-8 bg-white p-2 rounded-lg shadow-lg"
+      >
+        <QRCodeSVG
+          value={window.location.href + "/content"}
+          className="w-12 h-12"
+        />
+      </Link>
       <div className="w-full max-w-4xl bg-white rounded-xl shadow-xl p-4 md:p-8 mb-4 md:mb-8">
         {slides[currentSlide].isTitle || slides[currentSlide].isEnding ? (
           <div className="flex flex-col items-center justify-center min-h-[400px] md:min-h-[600px] text-center">
