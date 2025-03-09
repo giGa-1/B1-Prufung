@@ -2,38 +2,38 @@ import { useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
-  Plane,
+  Code,
   Book,
-  Briefcase,
   PlusSquare,
-  Shield,
   Star,
+  Brain,
+  Cpu,
 } from "lucide-react";
 
 import { QRCodeSVG } from "qrcode.react";
 import { Link } from "react-router-dom";
 
-const PilotPresentation = () => {
+const EngineeringPresentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      title: "Der Beruf des Piloten",
-      subtitle: "Eine faszinierende Karriere in der Luftfahrt",
-      icon: <Plane className="w-16 h-16 text-blue-500" />,
+      title: "Der Beruf des KI/ML-Ingenieurs",
+      subtitle: "Eine zukunftsorientierte Karriere in der Programmierung",
+      icon: <Brain className="w-16 h-16 text-[#4546ED]" />,
       isTitle: true,
     },
     {
       title: "Gliederung der Präsentation",
       subtitle: "Überblick über die Themen",
-      icon: <Book className="w-12 h-12 text-blue-500 mb-4" />,
+      icon: <Book className="w-12 h-12 text-[#4546ED] mb-4" />,
       content: [
         {
           title: "Hauptthemen:",
           points: [
-            "Was macht ein Pilot?",
+            "Was macht ein KI/ML-Ingenieur?",
             "Ausbildung und Qualifikationen",
-            "Arbeitsalltag eines Piloten",
+            "Arbeitsalltag eines KI/ML-Ingenieurs",
             "Karrieremöglichkeiten",
             "Vor- und Nachteile des Berufs",
             "Fazit",
@@ -42,7 +42,7 @@ const PilotPresentation = () => {
         {
           title: "Ziele der Präsentation:",
           points: [
-            "Einblick in den Beruf des Piloten",
+            "Einblick in den Beruf des KI/ML-Ingenieurs",
             "Verständnis der Anforderungen",
             "Überblick über Karrierewege",
             "Realistische Einschätzung des Berufs",
@@ -51,76 +51,76 @@ const PilotPresentation = () => {
       ],
     },
     {
-      title: "Was macht ein Pilot?",
+      title: "Was macht ein KI/ML-Ingenieur?",
       subtitle: "Hauptverantwortlichkeiten",
-      icon: <Briefcase className="w-12 h-12 text-blue-500 mb-4" />,
+      icon: <Cpu className="w-12 h-12 text-[#4546ED] mb-4" />,
       content: [
         {
-          title: "Flugvorbereitung:",
+          title: "Forschung und Entwicklung:",
           points: [
-            "Wetterbericht analysieren",
-            "Flugroute planen",
-            "Treibstoffberechnung durchführen",
-            "Technische Kontrollen",
+            "Entwicklung von Algorithmen und Modellen",
+            "Training und Optimierung von neuronalen Netzen",
+            "Datenanalyse und -vorverarbeitung",
+            "Implementierung von Machine Learning-Lösungen",
           ],
         },
         {
-          title: "Während des Fluges:",
+          title: "Praktische Anwendung:",
           points: [
-            "Steuerung des Flugzeugs",
-            "Kommunikation mit der Flugsicherung",
-            "Überwachung aller Systeme",
-            "Koordination mit der Crew",
+            "Integration von KI-Lösungen in bestehende Systeme",
+            "Überwachung der Modellleistung",
+            "Fehlerbehebung und Debugging",
+            "Zusammenarbeit mit Produktteams und Stakeholdern",
           ],
         },
       ],
     },
     {
       title: "Ausbildung und Qualifikationen",
-      subtitle: "Der Weg zum Piloten",
-      icon: <Book className="w-12 h-12 text-blue-500 mb-4" />,
+      subtitle: "Der Weg zum KI/ML-Ingenieur",
+      icon: <Book className="w-12 h-12 text-[#4546ED] mb-4" />,
       content: [
         {
           title: "Voraussetzungen:",
           points: [
-            "Mindestalter: 17 Jahre",
-            "Abitur oder gleichwertiger Abschluss",
-            "Sehr gute Englischkenntnisse (mind. B2)",
-            "Einwandfreier Gesundheitszustand",
+            "Studium in Informatik, Mathematik oder verwandten Fächern",
+            "Solide Programmierkenntnisse (Python, R, Java)",
+            "Gute mathematische Grundlagen (Statistik, lineare Algebra)",
+            "Verständnis von Datenstrukturen und Algorithmen",
           ],
         },
         {
-          title: "Ausbildungsdauer:",
+          title: "Zusätzliche Qualifikationen:",
           points: [
-            "Theoretische Ausbildung: 12-14 Monate",
-            "Praktische Ausbildung: 12-18 Monate",
-            "Simulator-Training: 200+ Stunden",
-            "Mindestflugstunden: 1500",
+            "Kurse und Zertifikate in Machine Learning",
+            "Praktische Erfahrung mit ML-Frameworks (TensorFlow, PyTorch)",
+            "Selbstständige Projekte und Forschungsarbeiten",
+            "Kontinuierliche Weiterbildung in neuen Technologien",
           ],
         },
       ],
     },
     {
       title: "Arbeitsalltag",
-      subtitle: "Ein Tag im Leben eines Piloten",
-      icon: <Shield className="w-12 h-12 text-blue-500 mb-4" />,
+      subtitle: "Ein Tag im Leben eines KI/ML-Ingenieurs",
+      icon: <Code className="w-12 h-12 text-[#4546ED] mb-4" />,
       content: [
         {
           title: "Typischer Tagesablauf:",
           points: [
-            "Briefing 60-90 Minuten vor Abflug",
-            "Überprüfung der Wetterbedingungen",
-            "Durchführung der Sicherheitschecks",
-            "3-4 Flüge pro Arbeitstag",
+            "Überprüfung der Modellleistung und Metriken",
+            "Programmieren und Debugging von Algorithmen",
+            "Experimentieren mit neuen Ansätzen und Modellen",
+            "Teilnahme an Team-Meetings und Code-Reviews",
           ],
         },
         {
-          title: "Arbeitszeiten:",
+          title: "Arbeitsumgebung:",
           points: [
-            "Maximale Flugzeit: 900 Stunden/Jahr",
-            "Flexible Dienstpläne",
-            "Wechselnde Tag- und Nachtschichten",
-            "10-15 Arbeitstage pro Monat",
+            "Moderne Büros mit leistungsstarker Hardware",
+            "Flexible Arbeitszeiten und Remote-Arbeit",
+            "Kollaborative Teamarbeit und agile Entwicklung",
+            "Kontinuierliches Lernen und Wissensaustausch",
           ],
         },
       ],
@@ -128,24 +128,24 @@ const PilotPresentation = () => {
     {
       title: "Karrieremöglichkeiten",
       subtitle: "Entwicklung und Perspektiven",
-      icon: <Star className="w-12 h-12 text-blue-500 mb-4" />,
+      icon: <Star className="w-12 h-12 text-[#4546ED] mb-4" />,
       content: [
         {
           title: "Aufstiegschancen:",
           points: [
-            "First Officer → Senior First Officer",
-            "Senior First Officer → Captain",
-            "Captain → Fleet Captain",
-            "Möglichkeit als Ausbilder zu arbeiten",
+            "Junior ML Engineer → Senior ML Engineer",
+            "Senior ML Engineer → ML Architect",
+            "ML Architect → Chief AI Officer",
+            "Spezialisierung in bestimmten Bereichen (Computer Vision, NLP)",
           ],
         },
         {
           title: "Gehaltsentwicklung:",
           points: [
-            "Einstiegsgehalt: 45.000-60.000€/Jahr",
-            "First Officer: 60.000-80.000€/Jahr",
-            "Captain: 100.000-150.000€/Jahr",
-            "Zusätzliche Bonuszahlungen möglich",
+            "Einstiegsgehalt: 60.000-80.000€/Jahr",
+            "Senior Level: 90.000-120.000€/Jahr",
+            "Lead/Architect: 120.000-150.000€/Jahr",
+            "Zusätzliche Boni und Aktienoptionen möglich",
           ],
         },
       ],
@@ -153,24 +153,24 @@ const PilotPresentation = () => {
     {
       title: "Vor- und Nachteile",
       subtitle: "Eine realistische Einschätzung",
-      icon: <PlusSquare className="w-12 h-12 text-blue-500 mb-4" />,
+      icon: <PlusSquare className="w-12 h-12 text-[#4546ED] mb-4" />,
       content: [
         {
           title: "Vorteile:",
           points: [
-            "Überdurchschnittliches Gehalt",
-            "Internationale Arbeitsumgebung",
-            "Hoher gesellschaftlicher Status",
-            "Möglichkeit, die Welt zu bereisen",
+            "Arbeit an zukunftsweisenden Technologien",
+            "Überdurchschnittliches Gehalt und Jobsicherheit",
+            "Kreative und intellektuell anspruchsvolle Arbeit",
+            "Globale Jobmöglichkeiten und Remote-Arbeit",
           ],
         },
         {
           title: "Herausforderungen:",
           points: [
-            "Unregelmäßige Arbeitszeiten",
-            "Hohe Verantwortung",
-            "Häufige Abwesenheit von zuhause",
-            "Strenge medizinische Anforderungen",
+            "Schnelle technologische Veränderungen erfordern ständiges Lernen",
+            "Komplexe Probleme und hohe Erwartungen",
+            "Ethische Fragen und gesellschaftliche Auswirkungen",
+            "Lange Arbeit an Projekten ohne garantierten Erfolg",
           ],
         },
       ],
@@ -178,24 +178,24 @@ const PilotPresentation = () => {
     {
       title: "Fazit",
       subtitle: "Zusammenfassung und persönliche Einschätzung",
-      icon: <Star className="w-12 h-12 text-blue-500 mb-4" />,
+      icon: <Star className="w-12 h-12 text-[#4546ED] mb-4" />,
       content: [
         {
           title: "Zusammenfassung:",
           points: [
-            "Anspruchsvoller und verantwortungsvoller Beruf",
-            "Intensive Ausbildung erforderlich",
-            "Sehr gute Karrierechancen",
-            "Überdurchschnittliche Verdienstmöglichkeiten",
+            "Innovativer und zukunftsorientierter Beruf",
+            "Solide mathematische und programmiertechnische Grundlagen nötig",
+            "Ausgezeichnete Karriere- und Wachstumschancen",
+            "Hohe Nachfrage auf dem Arbeitsmarkt",
           ],
         },
         {
           title: "Persönliche Anforderungen:",
           points: [
-            "Hohe Stressresistenz und Konzentrationsfähigkeit",
-            "Technisches Verständnis und schnelle Auffassungsgabe",
-            "Teamfähigkeit und Kommunikationsstärke",
-            "Bereitschaft zu unregelmäßigen Arbeitszeiten",
+            "Leidenschaft für Technologie und kontinuierliches Lernen",
+            "Analytisches Denken und Problemlösungsfähigkeiten",
+            "Kreativität und Innovationsbereitschaft",
+            "Geduld und Ausdauer bei komplexen Herausforderungen",
           ],
         },
       ],
@@ -203,7 +203,7 @@ const PilotPresentation = () => {
     {
       title: "Vielen Dank für Ihre Aufmerksamkeit!",
       subtitle: "Haben Sie noch Fragen?",
-      icon: <Star className="w-16 h-16 text-blue-500 animate-pulse" />,
+      icon: <Brain className="w-16 h-16 text-[#4546ED] animate-pulse" />,
       isEnding: true,
       content: [
         {
@@ -241,7 +241,7 @@ const PilotPresentation = () => {
         {slides[currentSlide].isTitle || slides[currentSlide].isEnding ? (
           <div className="flex flex-col items-center justify-center min-h-[400px] md:min-h-[600px] text-center">
             {slides[currentSlide].icon}
-            <h1 className="text-3xl md:text-5xl font-bold text-blue-600 mt-4 md:mt-8 mb-2 md:mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-[#4546ED] mt-4 md:mt-8 mb-2 md:mb-4">
               {slides[currentSlide].title}
             </h1>
             <h2 className="text-xl md:text-2xl text-gray-600 mb-6 md:mb-12">
@@ -253,19 +253,19 @@ const PilotPresentation = () => {
                   <p className="text-2xl md:text-3xl font-light text-gray-600 mt-4 md:mt-8">
                     Präsentation erstellt von:
                   </p>
-                  <p className="text-3xl md:text-4xl font-bold text-blue-600">
-                    Hlib Podhorniuk
+                  <p className="text-3xl md:text-4xl font-bold text-[#4546ED]">
+                    {slides[currentSlide].content[0].points[0]}
                   </p>
                   <div className="mt-4 md:mt-8 flex space-x-4">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce delay-0"></div>
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce delay-150"></div>
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce delay-300"></div>
+                    <div className="w-3 h-3 bg-[#4546ED] rounded-full animate-bounce delay-0"></div>
+                    <div className="w-3 h-3 bg-[#4546ED] rounded-full animate-bounce delay-150"></div>
+                    <div className="w-3 h-3 bg-[#4546ED] rounded-full animate-bounce delay-300"></div>
                   </div>
                 </div>
               ) : (
                 <img
-                  src="/pilot.jpg"
-                  alt="Flugzeugcockpit"
+                  src="/ai1.jpg"
+                  alt="KI-Programmierung"
                   className="rounded-lg object-cover max-w-full h-full"
                 />
               )}
@@ -275,7 +275,7 @@ const PilotPresentation = () => {
           <div className="min-h-[400px] md:min-h-[600px]">
             <div className="text-center mb-4 md:mb-8">
               {slides[currentSlide].icon}
-              <h2 className="text-2xl md:text-4xl font-bold text-blue-600 mb-2">
+              <h2 className="text-2xl md:text-4xl font-bold text-[#4546ED] mb-2">
                 {slides[currentSlide].title}
               </h2>
               <p className="text-lg md:text-xl text-gray-600">
@@ -295,7 +295,7 @@ const PilotPresentation = () => {
                             key={pointIdx}
                             className="flex items-center text-sm md:text-base text-gray-700"
                           >
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 md:mr-3 flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-[#4546ED] rounded-full mr-2 md:mr-3 flex-shrink-0"></div>
                             <span>{point}</span>
                           </li>
                         ))}
@@ -312,7 +312,7 @@ const PilotPresentation = () => {
         <div className="flex items-center gap-3 md:gap-4">
           <button
             onClick={prevSlide}
-            className="p-2 md:p-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-all transform hover:scale-110"
+            className="p-2 md:p-3 rounded-full bg-[#4546ED] text-white hover:bg-blue-600 transition-all transform hover:scale-110"
           >
             <ChevronLeft size={20} />
           </button>
@@ -321,7 +321,7 @@ const PilotPresentation = () => {
           </div>
           <button
             onClick={nextSlide}
-            className="p-2 md:p-3 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition-all transform hover:scale-110"
+            className="p-2 md:p-3 rounded-full bg-[#4546ED] text-white hover:bg-blue-600 transition-all transform hover:scale-110"
           >
             <ChevronRight size={20} />
           </button>
@@ -333,7 +333,7 @@ const PilotPresentation = () => {
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-2 md:w-3 h-2 md:h-3 rounded-full transition-colors transform hover:scale-125 ${
-                currentSlide === index ? "bg-blue-500 scale-125" : "bg-gray-300"
+                currentSlide === index ? "bg-[#4546ED] scale-125" : "bg-gray-300"
               }`}
             />
           ))}
@@ -343,4 +343,4 @@ const PilotPresentation = () => {
   );
 };
 
-export default PilotPresentation;
+export default EngineeringPresentation;
